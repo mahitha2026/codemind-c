@@ -5,27 +5,26 @@ int main()
     scanf("%d%d",&x,&y);
     for(x;x<=y;x++)
     {
-        n=x;
-        co=0;
-        c=0;
-        while(n>0)
+    n=x;
+    co=0;
+    c=0;
+    while(n>0)
+    {
+        r=n%10;
+        n=n/10;
+        co++;
+        if(r==0)
         {
-            r=n%10;
-            n/=10;
-            co++;
-            if(r==0)
-            {
-                break;
-            }
-            if(x%r==0)
-            {
-                c++;
-                
-            }
+            break;
         }
-        if(c==co)
+        if(x%r==0)
         {
-            printf("%d ",x);
+            c++;
         }
     }
+    if(c==co)
+    {
+        printf("%d ",x);
+    }
+  }
 }
